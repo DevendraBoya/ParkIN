@@ -1,6 +1,12 @@
 var firstSeatLabel = 1;
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+    var uid = Cookies.get('uid');
+    if (!uid) {
+        window.location.href = "login.html";
+    }
+
     var $cart = $('#selected-seats');
     var $counter = $('#counter');
     var $total = $('#total');
@@ -21,27 +27,27 @@ $(document).ready(function() {
         map: layout,
         seats: {
             p: {
-                price   : 0,
-                classes : 'first-class', //your custom CSS class
+                price: 0,
+                classes: 'first-class', //your custom CSS class
                 category: 'First Class'
             }
         },
-        naming : {
-            top : false,
+        naming: {
+            top: false,
             left: false,
-            getLabel : function (character, row, column) {
+            getLabel: function (character, row, column) {
                 return firstSeatLabel++;
             },
-            getId: function(character, row, column) {
-                return "spot_"+firstSeatLabel;
+            getId: function (character, row, column) {
+                return "spot_" + firstSeatLabel;
             }
         },
         click: function () {
             console.log(this.node().text());
             if (this.status() == 'available') {
-                
+
                 sc.find('selected').status('available');
-                
+
                 return 'selected';
             } else if (this.status() == 'selected') {
                 return 'available';
@@ -52,7 +58,9 @@ $(document).ready(function() {
             }
         },
         animate: true
-});
+    });
+
+    console.log(sc);
 
     //this will handle "[cancel]" link clicks
     $('#selected-seats').on('click', '.cancel-cart-item', function () {
@@ -73,13 +81,13 @@ function recalculateTotal(sc) {
     sc.find('selected').each(function () {
         total += this.data().price;
     });
-    
+
     return total;
 }
 
-$(document).ready(function() {
-    $(".bookAppointment").click(function(e){
-            e.preventDefault();
-            window.location.href = "manageappointment.html";    
+$(document).ready(function () {
+    $(".bookAppointment").click(function (e) {
+        e.preventDefault();
+        window.location.href = "manageappointment.html";
     });
 });
