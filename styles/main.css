@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url('../images/Parking.jpg') !important;
+    background-position: center;
+    font-family: Nunito,sans-serif;
+    font-size: 14px;
+}
+
+.wrapper {	
+	margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.container .registerpage {
+    top:50%;
+    opacity: 0.95;
+    width: 60%;
+    padding-bottom: 50px;
+}
+.extravehicle .input-group {
+    padding: 0 0 15px 15px;
+}
+.container .registerpage .addAnother {
+    margin-top: 25px;
+}
+.container .registerpage h1 {
+    margin-bottom: 30px;
+    margin-top: 0px;
+ }
+.container .registerpage .vehicledetails {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+}
+.container .registerpage .registerbtn {
+    margin-right: 15px;
+}
+.resetpage, .welcomepage {
+    background: #fff;
+    opacity: 0.95;
+}
+.resetpage {
+    padding: 20px;
+    width: 450px;
+}
+.resetpage .form-reset-heading {
+    font-size: 18px;
+    color: darkgreen;
+    text-align: center;
+}
+.welcomepage h1{
+    color: darkgreen;
+}
+.welcomepage .btn {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.ui-timepicker-container .ui-timepicker {
+    text-align: left;
+}
+
+.center-body {	
+	margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+}
+.center-body h2 {
+    color: #0067b2;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    background-color: #d8d8db;
+}
+
+.buttonconfirm {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+#forgotpwd:focus{
+    outline: none;
+}
+
+#pwdModal h2{
+    margin: 0px;
+}
+
+#pwdModal .modal-body{
+    overflow: hidden;
+    padding-bottom: 0px;
+}
+#complaintModal h2{
+    margin: 0px;
+}
+
+#complaintModal .modal-body{
+    overflow: hidden;
+    padding-bottom: 0px;
+}
+.form-signin .form-signin-heading {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.footer .footer-links {
+    float: right;
+}
+
+.footer .footer-links ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 15px;
+}
+.navbar.stickey-bar {
+    background-color: #d8d8db;
+    border-color: #d8d8db;
+}
+
+.navbar.stickey-bar .navbar-nav>li>a {
+    color: #337ab7;
+    font-size: 16px;
+}
+.navbar.stickey-bar .project-logo {
+    background: url(../images/logo.png) left center no-repeat;
+    width: 100px;
+    background-size: 75px 60px;
+    height: 60px;
+}
+.navbar-default .navbar-nav>li>a {
+    height: 60px;
+}
+.container .navbar-nav>li>a {
+    padding-top: 20px;
+}
+
+.form-signin {
+  max-width: 450px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+.container.manageAppointment {
+    top:45%;
+}
+.manageAppointment .btn {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.bookAppointment {
+    margin-top: 18px;
+}
+#complaintModal, #pwdModal {
+    top:10%;
+}
+.raisecomplaint {
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+}
+.raisecomplaint .btn {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        width:90%;
+    }
+    .wrapper h2 {
+        font-size: 26px;
+    }
+    .footer .container {
+        padding: 0px;
+    }
+    .footer .footer-links ul {
+        padding-left: 10px;
+    }
+    .footer .footer-links ul li{
+        padding: 0 5px;
+    }
+    .center-body {
+        top: 40%;
+        width:90%;
+    }
+    .manageAppointment h2 {
+        font-size: 20px;
+    }
+    .manageAppointment .btn {
+        margin-bottom: 15px;
+        margin-right: 0px;
+    }
+    .welcomepage .btn {
+       margin-right: 5px; 
+    }
+    .container .registerpage {
+       width: 90%;
+       top: 60%;
+       padding-top: 90px;
+    }
+    .extravehicle .input-group {
+       margin-right: 15px;
+    }
+    .container .registerpage .registerbtn {
+        width: 90%;
+    }
+    .container .registerpage .addAnother {
+        margin-top:0px;
+    }
+    .resetpage {
+        width: 95%;
+    }
+
+}

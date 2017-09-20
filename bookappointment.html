@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Your Parking!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/bootstrap-datetimepicker.css">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/moment.min.js"></script>
+  <script src="scripts/bootstrap-datetimepicker.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+ <!-- Top NavBar Code Starts -->
+<nav class="navbar navbar-default navbar-fixed-top stickey-bar">
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand project-logo" href="login.html">&nbsp;</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="login.html">Login</a></li>
+        <li class="active"><a href="bookappointment.html">Book Appointment</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<!-- Top NavBar Code Ends -->
+
+
+ <!-- Body Content Code Starts -->
+  <div class="container center-body">
+    <form>
+    <div class="form-row row">
+         <div class="form-group col-md-3">
+        <label for="vehicleNum" class="col-form-label">Vehicle Number</label>
+            <div class="form-group">
+                <input type="text" class="form-control" id="vehicleNum" required placeholder="Vehicle Number" name="vehicleNum">
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+        <label for="inputCity" class="col-form-label">City</label>
+        <select id="inputCity" class="form-control">
+            <option>Select City</option>            
+            <option>Hyderabad</option>
+            <option>Chennai</option>
+            <option>Mumbai</option>
+        </select>
+        </div>
+        <div class="form-group col-md-3">
+        <label for="inputLocation" class="col-form-label">Location</label>
+        <select id="inputLocation" class="form-control">
+            <option>Select Location</option>            
+            <option>Ob1</option>
+            <option>Ob2</option>
+            <option>Ob3</option>
+        </select>
+        </div>
+        <div class="form-group col-md-3">
+        <label for="inputSlot" class="col-form-label">Parking Slot</label>
+        <select id="inputSlot" class="form-control">
+            <option>Select Parking Slot</option>            
+            <option>A1</option>
+            <option>A2</option>
+            <option>A3</option>
+            <option>A4</option>
+            <option>A5</option>
+            <option>A6</option>
+            <option>A7</option>
+            <option>A8</option>
+            <option>A9</option>
+            <option>A10</option>
+            <option>B1</option>
+            <option>B2</option>
+            <option>B3</option>
+            <option>B4</option>
+            <option>B5</option>
+            <option>B6</option>
+            <option>B7</option>
+            <option>B8</option>
+            <option>B9</option>
+            <option>B10</option>
+            <option>C1</option>
+            <option>C2</option>
+            <option>C3</option>
+            <option>C4</option>
+            <option>C5</option>
+            <option>C6</option>
+            <option>C7</option>
+            <option>C8</option>
+            <option>C9</option>
+            <option>C10</option>
+        </select>
+        </div>
+        
+    </div>
+    <div class="form-row row">
+        <div class="form-group col-md-3">
+        <label for="inputSlot" class="col-form-label">Entry Date & Time</label>
+        <div class="form-group">
+                <div class='input-group date'>
+                    <input type='text' class="form-control" placeholder="Select Entry Time" id='datetimepicker'/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+        <label for="inputSlot" class="col-form-label">Exit Date & Time</label>
+        <div class="form-group">
+                <div class='input-group date'>
+                    <input type='text' class="form-control" placeholder="Select Exit Time" id='datetimepicker2'/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+                <button class="btn btn-lg btn-primary btn-block bookAppointment">Book Appointment</button>
+        </div>
+    </div>
+    </form>
+  </div>
+<!-- Body Content Code Ends -->
+
+<!-- Footer Code Starts -->
+    <footer class="footer">
+        <div class="container">
+        <span>&#169; Copyright ParkIN 2017</span>
+        <div class="text-right footer-links">
+            <ul>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+<!-- Footer Code Ends -->
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker, #datetimepicker2').datetimepicker({
+            format: 'mm/dd/yyyy HH:ii P',
+            startDate: new Date(),
+            showMeridian: true,
+        });
+    });
+</script>
+</body>
+</html>

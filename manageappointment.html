@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Your Parking!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+ <!-- Top NavBar Code Starts -->
+<nav class="navbar navbar-default navbar-fixed-top stickey-bar">
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand project-logo" href="login.html">&nbsp;</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="bookappointment.html">Book Appointment</a></li>
+        <li class="active"><a href="manageappointment.html">Manage Booking</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<!-- Top NavBar Code Ends -->
+
+
+ <!-- Body Content Code Starts -->
+  <div class="container center-body manageAppointment">
+    <div class="form-row text-center">
+        <div class="requestconfirm">
+        <h2>Your Request has been confirmed!</h2>   
+        <div class="form-group buttonconfirm">
+            <div >
+                <button type="button" class="btn btn-success btn-lg  ">Confirm Arraival</button>
+                <button type="button" class="btn btn-danger btn-lg ">Cancel Booking</button>
+                <button type="button" class="btn btn-warning btn-lg ">Update Booking</button>
+            </div>
+        </div>
+        </div>
+        <div class="raisecomplaint row">
+            <h3 class="col-md-6 text-right">Is slot already occupied?</h3>
+            <button type="button" data-target="#complaintModal" data-toggle="modal" class="col-md-6 btn btn-info btn-md  ">Raise a Complaint</button>
+        </div>
+
+        <div class="confirmArraival hidden">
+            <div class="alert alert-success">
+                The parking confirmed! Thank you for using app.
+            </div>
+        </div>
+
+        <div class="concelAppointment hidden">
+            <div class="alert alert-danger">
+                Your booking succesfully cancelled.
+            </div>
+        </div>
+        
+    </div>
+  </div>
+<!-- Body Content Code Ends -->
+
+<!-- Raise Complaint Modal Starts -->
+<div id="complaintModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">Raise a Complaint</h2>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                          
+                          <p>Please enter already parked vehicle number.</p>
+                            <div class="panel-body">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                        <input class="form-control input-lg" placeholder="Enter Vehicle Number" name="vehicleNum" type="text">
+                                        </div>
+                                    </div>
+                                    <input class="btn btn-lg btn-primary btn-block" value="Raise Complaint" type="submit">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <div class="col-md-12">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		  </div>	
+      </div>
+  </div>
+  </div>
+</div>
+<!-- Raise Complaint Modal Ends -->
+
+<!-- Footer Code Starts -->
+    <footer class="footer">
+        <div class="container">
+        <span>&#169; Copyright ParkIN 2017</span>
+        <div class="text-right footer-links">
+            <ul>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+<!-- Footer Code Ends -->
+</body>
+</html>

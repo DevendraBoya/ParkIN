@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Your Parking!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+ <!-- Top NavBar Code Starts -->
+<nav class="navbar navbar-default navbar-fixed-top stickey-bar">
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand project-logo" href="login.html">&nbsp;</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li class="active"><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<!-- Top NavBar Code Ends -->
+
+
+ <!-- Body Content Code Starts -->
+  <div class="wrapper">
+    <form class="form-signin" id="login-form">       
+      <h2 class="form-signin-heading">Please Enter Login Details</h2>
+      <div class="form-group">
+        <label for="empID">Email ID:</label>
+        <input type="email" class="form-control" id="empID" required placeholder="Enter Email ID" name="empID">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" required placeholder="Enter Password" name="pwd">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block gotoAppointment" type="submit">Login</button>
+      <div class="forgot-password">
+      <a href="#" data-target="#pwdModal" data-toggle="modal" id="forgotpwd">Forgot password?</a>
+      <a href="register.html" class="pull-right">Not Registered?</a>
+      </div>
+    </form>
+  </div>
+<!-- Body Content Code Ends -->
+
+<!-- Footer Code Starts -->
+    <footer class="footer">
+        <div class="container">
+        <span>&#169; Copyright ParkIN 2017</span>
+        <div class="text-right footer-links">
+            <ul>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+<!-- Footer Code Ends -->
+
+<!-- Forgot Password Modal Starts -->
+<div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">Reset Password</h2>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                          
+                          <p>If you have forgotten your password you can reset it here.</p>
+                            <div class="panel-body">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                        <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
+                                        </div>
+                                    </div>
+                                    <input class="btn btn-lg btn-primary btn-block" value="Send Reset Link" type="submit">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div class="modal-footer">
+          <div class="col-md-12">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+		  </div>	
+      </div>
+  </div>
+  </div>
+</div>
+<!-- Forgot Password Modal Ends -->
+
+</body>
+</html>
