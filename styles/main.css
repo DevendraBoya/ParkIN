@@ -18,12 +18,7 @@ body {
 }
 
 .wrapper {	
-	margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+	margin: 8em auto 5em auto;
 }
 .container .registerpage {
     top:50%;
@@ -73,13 +68,8 @@ body {
     text-align: left;
 }
 
-.center-body {	
-	margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.container.center-body {	
+	margin: 7em auto 5em auto;
     background: #fff;
     padding: 20px;
 }
@@ -175,9 +165,18 @@ body {
     width: 200px;
     margin-right: 20px;
 }
-
-.bookAppointment {
+.getslots {
     margin-top: 18px;
+}
+.bookAppointment {
+    margin-top: 30px;
+    display: inline-block;
+    float: none;
+    margin-bottom: 30px;
+}
+#layoutContainer {
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
 }
 #complaintModal, #pwdModal {
     top:10%;
@@ -229,8 +228,8 @@ div.seatCharts-cell {
 	width: 36px;
 	line-height: 36px;
     border: 1px solid white;
-    background-color: lightslategray;
-    border-color: lightgrey;
+    background-color: transparent;
+    border-color: #afafaf;
 }
 div.seatCharts-seat {
 	color: #FFFFFF;
@@ -291,9 +290,11 @@ div.seatCharts-seat:focus {
 }
 
 div#seat-map {
-    border: 1px solid lightgray;
-    background-color: lightslategray;
+    border: 1px solid #afafaf;
+    background-color: #f1f1f1;
     border-radius: 5px;
+    float: none;
+    display: inline-block;
 }
 /*Graphical Representation for Slot Styles Ends*/
 
@@ -329,8 +330,6 @@ div#seat-map {
     }
     .container .registerpage {
        width: 90%;
-       top: 60%;
-       padding-top: 90px;
     }
     .extravehicle .input-group {
        margin-right: 15px;
@@ -343,6 +342,17 @@ div#seat-map {
     }
     .resetpage {
         width: 95%;
+    }
+    .raisecomplaint h3 {
+        text-align: center
+    }
+    #layoutContainer {
+        min-width: unset !important;
+    }
+    div.seatCharts-cell {
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
     }
 
 }

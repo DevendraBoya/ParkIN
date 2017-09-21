@@ -44,13 +44,13 @@
  <!-- Body Content Code Starts -->
   <div class="container center-body">
     <div>
-    <form>
+    <form novalidate>
     <div class="form-row row">
-         <div class="form-group col-md-3">
+         <div class="form-group col-md-3 col-md-offset-1">
         <label for="vehicleNum" class="col-form-label">Vehicle Number</label>
-            <div class="form-group">
-                <input type="text" class="form-control" id="vehicleNum" required placeholder="Vehicle Number" name="vehicleNum">
-            </div>
+            <select id="vehicleNum" class="form-control">
+            <option>Select Vehicle Number</option>            
+        </select>
         </div>
         <div class="form-group col-md-3">
         <label for="inputCity" class="col-form-label">City</label>
@@ -70,47 +70,10 @@
             <option>Ob3</option>
         </select>
         </div>
-        <div class="form-group col-md-3">
-        <label for="inputSlot" class="col-form-label">Parking Slot</label>
-        <select id="inputSlot" class="form-control">
-            <option>Select Parking Slot</option>            
-            <option>A1</option>
-            <option>A2</option>
-            <option>A3</option>
-            <option>A4</option>
-            <option>A5</option>
-            <option>A6</option>
-            <option>A7</option>
-            <option>A8</option>
-            <option>A9</option>
-            <option>A10</option>
-            <option>B1</option>
-            <option>B2</option>
-            <option>B3</option>
-            <option>B4</option>
-            <option>B5</option>
-            <option>B6</option>
-            <option>B7</option>
-            <option>B8</option>
-            <option>B9</option>
-            <option>B10</option>
-            <option>C1</option>
-            <option>C2</option>
-            <option>C3</option>
-            <option>C4</option>
-            <option>C5</option>
-            <option>C6</option>
-            <option>C7</option>
-            <option>C8</option>
-            <option>C9</option>
-            <option>C10</option>
-        </select>
-        </div>
-        
     </div>
     <div class="form-row row">
-        <div class="form-group col-md-3">
-        <label for="inputSlot" class="col-form-label">Entry Date & Time</label>
+        <div class="form-group col-md-3 col-md-offset-1">
+        <label for="datetimepicker" class="col-form-label">Entry Date & Time</label>
         <div class="form-group">
                 <div class='input-group date'>
                     <input type='text' class="form-control" placeholder="Select Entry Time" id='datetimepicker'/>
@@ -132,21 +95,22 @@
             </div>
         </div>
         <div class="form-group col-md-3">
-                <button class="btn btn-lg btn-primary btn-block bookAppointment">Book Appointment</button>
+                <button class="btn btn-lg btn-primary btn-block getslots">Get Available Slots</button>
         </div>
     </div>
     </form>
 </div>
 
-    <!-- <div class="" id="layoutContainer">
-        <div id="seat-map">
-
+    <div class="row text-center" id="layoutContainer">
+        <div id="seat-map" class="centered">
         </div>
         <div class="booking-details">
-
             <div id="legend"></div>
         </div>
-    </div> -->
+        <div class="row text-center">
+            <button class="btn btn-lg col-md-3 btn-primary bookAppointment">Book Appointment</button>
+        </div>
+    </div> 
   </div>
     
 <!-- Body Content Code Ends -->

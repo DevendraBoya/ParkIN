@@ -78,6 +78,12 @@ function recalculateTotal(sc) {
 }
 
 $(document).ready(function() {
+    $('#layoutContainer').hide(); 
+    $(".getslots").click(function(e){
+        e.preventDefault();
+        $('#layoutContainer').show();    
+    });
+    
     $(".bookAppointment").click(function(e){
             e.preventDefault();
             window.location.href = "manageappointment.html";    
